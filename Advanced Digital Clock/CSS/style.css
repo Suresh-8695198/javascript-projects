@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@font-face {
+    font-family:digital-7;
+    src: url('digital-7.ttf');
+}
+html{
+    font-size: 12px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 2;
+    margin-right: 0;
+}
+
+body{
+    width:130vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:white;
+    user-select: none;
+    cursor: pointer;
+    font-family:'Poppins',sans-serif;
+   
+}
+.days,.month{
+    width: 400px;
+    height: 50px;
+    color: rgba(113, 128, 147,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.days span,.month span{
+    
+    width:80px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+}
+.day-active{
+    color: rgb(4, 243, 124) ;
+}
+.clock{
+    width: 600px;
+    height: 100px;
+   font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:digital-7;
+    color:rgb(4, 184, 255);
+    animation: blink 1.0s ease infinite;
+}
+
+.num{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    text-align: right;
+}
+.num::before{
+    content: '0';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: rgba(113, 128, 147,0.1);
+}
+.colon{
+    width:50px;
+    height: 100px;
+    text-align: center;
+  animation: blink 0.7s ease infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.meridian span{
+    display: block;
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+    color: rgba(113, 128, 147,0.1);
+    font-weight: bolder;
+}
+.meridian span:nth-child(2){
+    margin-top: 10px;
+}
+.active{
+    color: rgb(4, 243, 124) ;
+}
+.meridian-active{
+    color:rgb(247, 0, 115) !important;
+    animation: blink 0.7s infinite;
+}
+
+.date{
+    color:rgb(247, 0, 115);
+    font-family:digital-7;
+    font-size: 40px;
+    font-weight: bolder;
+    animation: blink 5.0s ease infinite;
+}
+.owner{
+    margin-top: 20px;
+    color: rgb(159, 13, 204);
+   font-weight: bold;
+    animation: fade 3.1s ease infinite;
+}
+@keyframes fade{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@media (min-width:576px)
+{
+    html {
+        font-size: 12px;
+      align-items: center;
+    }
+    .days,.month{
+        width: 600px;
+        height: 50px;
+        color: rgba(113, 128, 147,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    body{
+        width:100vw;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color:white;
+        user-select: none;
+        cursor: pointer;
+        font-family:'Poppins',sans-serif;
+       
+    }
+}
